@@ -1,7 +1,7 @@
 [![GitHub release](https://flat.badgen.net/github/release/adasjusk/Scanner)](https://github.com/adasjusk/Scanner)
 [![LabAPI Version](https://flat.badgen.net/static/LabAPI%20Version/v1.1.4)](https://github.com/northwood-studios/LabAPI)
-[![Original](https://flat.badgen.net/static/Original/Thundermaker300?icon=github)](https://github.com/Thundermaker300/Scanner)
-[![License](https://flat.badgen.net/github/license/adasjusk/Scanner)](https://github.com/adasjusk/Scanner/main/LICENSE)
+[![Original](https://flat.badgen.net/static/Original/Thundermaker300?icon=github)](https://github.com/Thundermaker300/Scanner/)
+[![License](https://flat.badgen.net/github/license/adasjusk/Scanner/)](https://github.com/adasjusk/Scanner/main/LICENSE)
 # Scanner
 An SCP:SL plugin that scans the facility and announces who is still alive. Requires LabAPI, not Exiled.
 
