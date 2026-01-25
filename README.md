@@ -1,5 +1,5 @@
 [![GitHub release](https://flat.badgen.net/github/release/adasjusk/Scanner)](https://github.com/adasjusk/Scanner)
-[![LabAPI Version](https://flat.badgen.net/static/LabAPI%20Version/v1.1.4)](https://github.com/northwood-studios/LabAPI)
+[![LabAPI Version](https://flat.badgen.net/static/LabAPI%20Version/v1.1.5)](https://github.com/northwood-studios/LabAPI)
 [![Original](https://flat.badgen.net/static/Original/Thundermaker300?icon=github)](https://github.com/Thundermaker300/Scanner/)
 [![License](https://flat.badgen.net/github/license/adasjusk/Scanner)](https://github.com/adasjusk/Scanner/blob/main/LICENSE)
 # Scanner
