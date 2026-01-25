@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Announcer")]
-[assembly: AssemblyDescription("Announces how many players left in the game")]
+[assembly: AssemblyDescription("Announces/Scans how many players left in the game")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Orange")]
-[assembly: AssemblyProduct("Announcer")]
-[assembly: AssemblyCopyright("Copyright © adasjusk 2025")]
+[assembly: AssemblyProduct("Announcer/Scanner")]
+[assembly: AssemblyCopyright("Copyright © adasjusk 2026")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

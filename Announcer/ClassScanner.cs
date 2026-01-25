@@ -23,16 +23,14 @@ namespace ClassScanner
         private CancellationTokenSource _scanCancellationToken;
         public static bool ScanInProgress;
         public override string Name => "Scanner";
-        public override string Description => "Announces via CASSIE how many classes are left and how many players are in each class";
+        public override string Description => "Announces/Scans via CASSIE how many classes are left and how many players are in each class";
         public override string Author => "adasjusk";
-        public override Version Version => new Version(1, 2, 0);
+        public override Version Version => new Version(2, 0, 0);
         public override Version RequiredApiVersion => new Version(LabApiProperties.CompiledVersion);
         public static ClassScanner Instance { get; private set; }
 
         public override void Enable()
         {
-            //IL_0025: Unknown result type (might be due to invalid IL or missing references)
-            //IL_002f: Expected O, but got Unknown
             Instance = this;
             _config = new Config();
             ConfigurationLoader.LoadConfig<Config>(this, "config", false);
@@ -44,8 +42,6 @@ namespace ClassScanner
 
         public override void Disable()
         {
-            //IL_0007: Unknown result type (might be due to invalid IL or missing references)
-            //IL_0011: Expected O, but got Unknown
             ServerEvents.RoundStarted -= OnRoundStarted;
             ServerEvents.RoundEnded -= OnRoundEnded;
             WarheadEvents.Detonated -= OnWarheadDetonated;
@@ -101,7 +97,7 @@ namespace ClassScanner
                     ScanInProgress = true;
                     string text = _config.ScanStartMessageCassie.Replace("{LENGTH}", _config.ScanLength.ToString());
                     string text2 = _config.ScanStartMessageCaption.Replace("{LENGTH}", _config.ScanLength.ToString());
-                    Cassie.Message(text, false, true, true, text2);
+                    Announcer.Message(text, text2, true, 0f, 1f);
                     await Task.Delay(TimeSpan.FromSeconds(_config.ScanLength), cancellationToken);
                     if (!cancellationToken.IsCancellationRequested)
                     {
@@ -123,12 +119,6 @@ namespace ClassScanner
 
         public void PerformScan()
         {
-            //IL_0033: Unknown result type (might be due to invalid IL or missing references)
-            //IL_0038: Unknown result type (might be due to invalid IL or missing references)
-            //IL_003a: Unknown result type (might be due to invalid IL or missing references)
-            //IL_0055: Expected I4, but got Unknown
-            //IL_006b: Unknown result type (might be due to invalid IL or missing references)
-            //IL_0070: Unknown result type (might be due to invalid IL or missing references)
             try
             {
                 int num = 0;
@@ -172,7 +162,7 @@ namespace ClassScanner
                 }
                 if (num + num2 + num3 + num4 + num5 + num6 == 0)
                 {
-                    Cassie.Message(_config.ScanNobodyMessageCassie, false, true, true, _config.ScanNobodyMessageCaption);
+                    Announcer.Message(_config.ScanNobodyMessageCassie, _config.ScanNobodyMessageCaption, true, 0f, 1f);
                     ScanInProgress = false;
                     return;
                 }
@@ -212,7 +202,7 @@ namespace ClassScanner
                 }
                 stringBuilder.Append(string.Join(" . ", list));
                 stringBuilder2.Append(string.Join(", ", list2));
-                Cassie.Message(stringBuilder.ToString(), false, true, true, stringBuilder2.ToString());
+                Announcer.Message(stringBuilder.ToString(), stringBuilder2.ToString(), true, 0f, 1f);
                 ScanInProgress = false;
             }
             catch (Exception arg)

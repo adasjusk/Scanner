@@ -50,10 +50,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\Desktop\Managed_SL\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Managed_SL\Assembly-CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="LabApi, Version=1.1.4.0, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\Northwood.LabAPI.1.1.4\lib\net48\LabApi.dll</HintPath>
+    <Reference Include="LabApi, Version=1.1.5.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\Northwood.LabAPI.1.1.5\lib\net48\LabApi.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
