@@ -50,7 +50,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\Desktop\Managed_SL\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\Failai\Managed_SL\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="LabApi, Version=1.1.5.0, Culture=neutral, processorArchitecture=AMD64">
       <HintPath>..\packages\Northwood.LabAPI.1.1.5\lib\net48\LabApi.dll</HintPath>
@@ -70,10 +70,16 @@
   <ItemGroup>
     <Compile Include="ClassScanner.cs" />
     <Compile Include="Config.cs" />
+    <Compile Include="Langs\DE.cs" />
+    <Compile Include="Langs\EN.cs" />
+    <Compile Include="Langs\FR.cs" />
+    <Compile Include="Langs\LT.cs" />
+    <Compile Include="Langs\PL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
